@@ -1,70 +1,42 @@
-/* LiminalSteps Minimal Style */
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: #0d0d0d;
-  color: #e5e5e5;
-  line-height: 1.6;
+/* Gallery Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-header {
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 1px solid #222;
+.card {
+  grid-column: span 12;
+  border: 1px solid #222;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0b0b0b;
 }
 
-nav a {
-  margin: 0 1rem;
-  color: #aaa;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-nav a:hover {
-  color: #fff;
-}
-
-main {
-  max-width: 850px;
-  margin: auto;
-  padding: 2rem;
-}
-
-h1, h2 {
-  font-weight: 400;
-  letter-spacing: 0.04em;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem;
-  border-top: 1px solid #222;
-  font-size: 0.85rem;
-  color: #777;
-}
-
-.button {
-  display: inline-block;
-  padding: 0.7rem 1.2rem;
-  margin-top: 1rem;
-  border: 1px solid #444;
-  color: #eee;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.button:hover {
-  background: #eee;
-  color: #000;
-}
-
-.gallery img {
+.card img {
   width: 100%;
-  margin-bottom: 1.5rem;
-  border-radius: 4px;
+  display: block;
 }
 
-.blog-list li {
-  margin-bottom: 1rem;
+.card .meta {
+  padding: 1rem;
+}
+
+.card .meta h3 {
+  margin: 0 0 .4rem 0;
+  font-size: 1rem;
+  color: #eaeaea;
+}
+
+.card .meta p {
+  margin: 0;
+  color: #9a9a9a;
+  font-size: .9rem;
+}
+
+/* Responsive */
+@media (min-width: 700px) {
+  .card.half { grid-column: span 6; }
+  .card.third { grid-column: span 4; }
 }
